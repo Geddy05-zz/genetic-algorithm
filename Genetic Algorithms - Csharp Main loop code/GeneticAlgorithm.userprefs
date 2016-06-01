@@ -2,13 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GeneticAlgorithm/Program.cs">
     <Files>
-      <File FileName="GeneticAlgorithm/Algorithm.cs" Line="63" Column="32" />
-      <File FileName="GeneticAlgorithm/Program.cs" Line="36" Column="16" />
+      <File FileName="GeneticAlgorithm/Algorithm.cs" Line="86" Column="23" />
+      <File FileName="GeneticAlgorithm/Program.cs" Line="23" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="31" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="44" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="39" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

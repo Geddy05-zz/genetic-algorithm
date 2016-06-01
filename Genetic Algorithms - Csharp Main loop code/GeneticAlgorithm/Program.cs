@@ -19,17 +19,19 @@ namespace GeneticAlgorithm
             */
 
 			Console.WriteLine ("What is the crossoverRate");
-			double crossoverRate;
+			double crossoverRate = 0.5;
 			double.TryParse (Console.ReadLine (), out crossoverRate);
 			Console.WriteLine ("What is the mutationRate");
-			double mutationRate;
+			double mutationRate = 0.5;
 			double.TryParse(Console.ReadLine(),out mutationRate);
 			bool elitism = false;
 			Console.WriteLine ("What is the populationSize");
-			int populationSize = Convert.ToInt32(Console.ReadLine());
+			int populationSize = 4;
+//				Convert.ToInt32(Console.ReadLine());
 
 			Console.WriteLine ("What is the numIterations");
-			int numIterations= Convert.ToInt32(Console.ReadLine());
+			int numIterations= 20;
+//				Convert.ToInt32(Console.ReadLine());
 
 			String individual = createIndividual ();
 			double fitness = computeFitness (individual);
@@ -37,9 +39,9 @@ namespace GeneticAlgorithm
 
 			Console.WriteLine (fitness);
 			GeneticAlgorithm<string> fakeProblemGA = new GeneticAlgorithm<string>(crossoverRate, mutationRate, elitism, populationSize, numIterations); // CHANGE THE GENERIC TYPE (NOW IT'S INT AS AN EXAMPLE) AND THE PARAMETERS VALUES
-//			var solution = fakeProblemGA.Run(createIndividual, computeFitness, selectTwoParents, crossover, mutation); 
-//            Console.WriteLine("Solution: ");
-//            Console.WriteLine(solution);
+			var solution = fakeProblemGA.Run(createIndividual, computeFitness, selectTwoParents, crossover, mutation); 
+            Console.WriteLine("Solution: ");
+            Console.WriteLine(solution);
 
         }
 
@@ -53,13 +55,44 @@ namespace GeneticAlgorithm
 		}
 
 		public static double computeFitness(string individual){
-			int x = 7;
+			int x = Convert.ToInt32 (individual,2);
 			double y = -Math.Pow(x, 2) + 7 * x;
 			return y;
 		}
 
 		public static Func<Tuple<string,string>> selectTwoParents(string[] individuals, double[] fitnesses){
-			return null;
+			int lenght = individuals.Length;
+			List<string> tempIndividuals = individuals.ToList();
+			List<double> tempFitnesses = fitnesses.ToList();
+			double[] probability = new double[lenght];
+			string[] parents = new string[2];
+			Random random = new Random ();
+
+			// sum Of Fitness is going wrong;
+			for(int i = 0; i < 2; i++){
+				double sumOfFitness = 0.0;
+
+				foreach (double fitness in tempFitnesses) {
+					sumOfFitness += fitness;
+				}
+
+				for (int j = 0; j < tempFitnesses.Count(); j++) {
+					probability[j] = (tempFitnesses[j]/sumOfFitness);
+				}
+				double rollete = random.NextDouble();
+				double lastProb = 0.0;
+				for(int j = 0; j < tempFitnesses.Count(); j++){
+					if (rollete >= lastProb && rollete <= probability[j]) {
+						parents [i] = tempIndividuals [j];
+							int num = j;
+						tempIndividuals.Remove (tempIndividuals [j]);
+						tempFitnesses.Remove(tempFitnesses[j]);
+						break;
+					}
+					lastProb = probability [j];
+				}
+			}
+			return () => Tuple.Create(parents[0],parents[1]);
 		}
 
 		public static Tuple<string, string> crossover(Tuple<string,string> individuals){
