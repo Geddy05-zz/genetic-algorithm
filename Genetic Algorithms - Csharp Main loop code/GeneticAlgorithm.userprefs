@@ -2,14 +2,19 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GeneticAlgorithm/Program.cs">
     <Files>
-      <File FileName="GeneticAlgorithm/Algorithm.cs" Line="86" Column="23" />
-      <File FileName="GeneticAlgorithm/Program.cs" Line="23" Column="44" />
+      <File FileName="GeneticAlgorithm/Algorithm.cs" Line="67" Column="1" />
+      <File FileName="GeneticAlgorithm/Program.cs" Line="75" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="44" column="1" />
-      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="39" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="46" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Algorithm.cs" line="66" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="95" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="72" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="76" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="84" column="1" />
+      <Breakpoint file="/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" line="87" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

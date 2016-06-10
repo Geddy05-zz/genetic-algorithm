@@ -1,6 +1,6 @@
 /Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/obj/Debug/GeneticAlgorithm.exe
 /Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/bin/Debug/GeneticAlgorithm.exe.config
 /Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/bin/Debug/GeneticAlgorithm.exe.mdb
 /Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/bin/Debug/GeneticAlgorithm.exe
+/Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/obj/Debug/GeneticAlgorithm.exe
 /Users/geddy/Documents/genetic/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/obj/Debug/GeneticAlgorithm.exe.mdb

@@ -24,7 +24,7 @@ namespace GeneticAlgorithm
             this.numIterations = numIterations;
         }
 
-        public Ind Run(Func<Ind> createIndividual, Func<Ind,double> computeFitness, Func<Ind[],double[],Func<Tuple<Ind,Ind>>> selectTwoParents, 
+		public Tuple<Ind, double> Run(Func<Ind> createIndividual, Func<Ind,double> computeFitness, Func<Ind[],double[],Func<Tuple<Ind,Ind>>> selectTwoParents, 
             Func<Tuple<Ind,Ind>,Tuple<Ind,Ind>> crossover, Func<Ind, double, Ind> mutation)
         {
             // initialize the first population
@@ -83,7 +83,17 @@ namespace GeneticAlgorithm
 
             // recompute the fitnesses on the final population and return the best individual
             var finalFitnesses = Enumerable.Range(0, populationSize).Select(i => computeFitness(currentPopulation[i])).ToArray();
-            return currentPopulation.Select((individual, index) => new Tuple<Ind, double>(individual, finalFitnesses[index])).OrderByDescending(tuple => tuple.Item2).First().Item1;
+
+			double avg = 0.0;
+			foreach(double fitness in finalFitnesses){
+				avg += fitness;
+			}
+			avg = avg / finalFitnesses.Count();
+			Console.WriteLine ("Fitness AVG");
+			Console.WriteLine (avg);
+
+
+            return currentPopulation.Select((individual, index) => new Tuple<Ind, double>(individual, finalFitnesses[index])).OrderByDescending(tuple => tuple.Item2).First();
         }
 
     }
